@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExpenseListDemo</string>
+    <string name="delete">Delete</string>
+    <string name="enter_expense_name_and_cost">Enter expense name and cost</string>
+    <string name="name">Name</string>
+    <string name="value">Value $</string>
+    <string name="add">+</string>
+    <string name="total">Total</string>
+    <string name="summary">Summary</string>
+</resources>
