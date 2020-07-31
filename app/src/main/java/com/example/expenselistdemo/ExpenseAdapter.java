@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.List;
+import java.util.Locale;
 
 public class ExpenseAdapter extends ArrayAdapter<Expense> {
     private final int layoutResource;
@@ -47,13 +48,15 @@ public class ExpenseAdapter extends ArrayAdapter<Expense> {
         }
         final Expense expense = expenseList.get(position);
         viewHolder.txtName.setText(expense.getName());
-        viewHolder.txtValue.setText(String.valueOf(expense.getValue()));
+        //viewHolder.txtValue.setText(String.valueOf(expense.getValue()));
+        viewHolder.txtValue.setText(String.format(Locale.getDefault(),"%8.2f",expense.getValue()));
         //viewHolder.btnDelete.setTag(position);
         viewHolder.btnDelete.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expenseList.remove(position);
                 notifyDataSetChanged();
+                
             }
         });
         return convertView;

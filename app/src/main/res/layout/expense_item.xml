@@ -16,33 +16,35 @@
 
     <TextView
         android:id="@+id/item_txt_name"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:textAlignment="viewStart"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@id/money_icon"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toEndOf="@id/icon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/icon" />
+
     <ImageView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/item_txt_value"
-        app:layout_constraintStart_toEndOf="@id/item_txt_name"
         android:id="@+id/money_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_baseline_attach_money_24"
-        />
+        app:layout_constraintEnd_toStartOf="@id/item_txt_value"
+        app:layout_constraintStart_toEndOf="@id/item_txt_name"
+        app:layout_constraintTop_toTopOf="@id/item_txt_name" />
 
     <TextView
 
         android:id="@+id/item_txt_value"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="textStart"
+        android:layout_marginEnd="64dp"
+        android:textAlignment="viewStart"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@id/btn_delete_expense"
         app:layout_constraintStart_toEndOf="@id/money_icon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/money_icon" />
 
     <Button
         android:id="@+id/btn_delete_expense"
@@ -54,7 +56,7 @@
         android:background="@android:color/transparent"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/item_txt_value" />
 
 
 
