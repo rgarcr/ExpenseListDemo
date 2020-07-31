@@ -1,20 +1,16 @@
 package com.example.expenselistdemo;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresPermission;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -99,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
         }
         Log.d("MAIN", "expenseSum: " + sum);
         total_lbl.setVisibility(View.VISIBLE);
-        total_txt.setText("Expenses: " + expenseList.size() + " Cost: $" + String.valueOf(sum));
+        total_txt.setText("Expenses: " + expenseList.size() + " Cost: $" +
+                String.format(Locale.getDefault(),"%.2f",sum));
     }
 
     @Override
