@@ -7,4 +7,7 @@
     <string name="add">+</string>
     <string name="total">Total</string>
     <string name="summary">Summary</string>
+    <string name="items">Items:</string>
+    <string name="cost">Cost: $</string>
+    <string name="reverse_list">Reverse List</string>
 </resources>

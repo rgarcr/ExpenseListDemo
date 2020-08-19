@@ -56,7 +56,8 @@ public class ExpenseAdapter extends ArrayAdapter<Expense> {
             public void onClick(View v) {
                 expenseList.remove(position);
                 notifyDataSetChanged();
-                
+
+
             }
         });
         return convertView;
